@@ -1,0 +1,24 @@
+<html>
+<canvas id="gameCanvas" width=800 height=600></canvas>
+<script>
+let pos = 20;//initial X postion of the rectangle
+  
+window.onload = function() {
+	canvas = document.getElementById('gameCanvas');
+  	canvasContent = canvas.getContext('2d');
+  	setInterval(draw,50);//reloading the function 'draw' every 50 ms
+}
+  
+function draw() {
+  	drawRect("#000000",0,0,canvas.width,canvas.height);/*covering the canvas area with a black rectangle*/
+    pos += 10;/*the X position of the rectangle in increased by 10 every time the function 'draw' is called*/
+    drawRect("purple", pos,pos,canvas.width - 500,canvas.height - 500)
+    pos > 500 ? pos = 0: pos = pos
+}
+  
+function drawRect(clr, startX, startY, width, height) {
+  	canvasContent.fillStyle = clr;
+  	canvasContent.fillRect(startX,startY,width,height);
+}
+</script>
+</html>
