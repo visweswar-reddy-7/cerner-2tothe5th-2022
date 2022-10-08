@@ -3,9 +3,11 @@
 {-Function Composition : Function Composition is the process of using the 
 output of one function as an input of another function.-}
 
+-- Functions definition
 eveno :: Int -> Bool 
 noto  :: Bool -> String 
 
+-- Functions decleration
 eveno x = if x `rem` 2 == 0 
    then True 
 else False 
