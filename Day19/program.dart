@@ -6,7 +6,7 @@ void concurrency(var message){
    print('execution from concurrency ... the message is :${message}'); 
 }  
 
-// execute concurrency method in different threads.
+// execute concurrency method in different threads. Output will be different each time when you run.
 void main(){
    Isolate.spawn(concurrency,'Hello!!');
    Isolate.spawn(concurrency,'Greetings!!');
